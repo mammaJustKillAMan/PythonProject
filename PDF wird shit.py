@@ -30,7 +30,7 @@ def count_images(pdf_path):
     count = 0
     for page in pdf_reader.pages:
         if "\XObject" in page["\Resources"]:
-            xobject = page["\Resources"]["\XObject"]
+            xobject = page["\Resources"["\XObject"]]
             for obj in xobject:
                 if xobject[obj]["/Type"] == "/Image":
                     count += 1
