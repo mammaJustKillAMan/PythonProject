@@ -36,8 +36,11 @@ def decryption(input_pdf, output_pdf):
     print(f"Decrypted PDF saved to {output_pdf}")
 
 #function to reorder pages of pdf
-def reorder_pages():
-    filename = PdfReader(input_pdf)
+#after sunning it turns out it also works as a cutter :)
+def reorder_pages(input_pdf, output_pdf):
+    reader = PdfReader(input_pdf)
+    writer = PdfWriter()
+
     new_order = input("Enter new order of pages: ")
     #the input has to be split and the countdown starts from 0 in python
     new_order = [int(x)-1 for x in new_order.split(", ")]
