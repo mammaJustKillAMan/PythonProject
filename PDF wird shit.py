@@ -70,4 +70,6 @@ def add_text(pdf_path, output_path, phrase, page_number=0, x=50, y=50):
     with open(output_path, "wb") as output_file:
         writer.write(output_file)
 
+    print(f"Text added to PDF and saved to {output_path}")
+
 #here was supposed to be a main with menu but i have no more strength rn, still ill
