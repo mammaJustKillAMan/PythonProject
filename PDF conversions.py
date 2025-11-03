@@ -4,10 +4,6 @@
 from pypdf import PdfReader, PdfWriter
 from pypdf.errors import PdfReadError
 
-#could be and pdf file
-input_pdf = "MITLockGuide.pdf"
-extra_pdf = "chicken.pdf"
-output_pdf = "PDF_decrypted.pdf"
 
 #the reader and writer wil go inside methods bc there might be an instance one uses different files withing the same run
 #reader = PdfReader()
