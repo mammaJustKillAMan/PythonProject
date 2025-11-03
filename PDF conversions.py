@@ -26,7 +26,7 @@ def decryption():
             ("Unable to decrypt PDF with provided password.")
             return
 
-        for page in result:
+        for page in reader.pages:
                 writer.add_page(page)
 
     with open(output_pdf, "wb") as output_file:
