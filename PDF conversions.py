@@ -9,8 +9,9 @@ input_pdf = "MITLockGuide.pdf"
 extra_pdf = "chicken.pdf"
 output_pdf = "PDF_decrypted.pdf"
 
-reader = PdfReader()
-writer = PdfWriter()
+#the reader and writer wil go inside methods bc there might be an instance one uses different files withing the same run
+#reader = PdfReader()
+#writer = PdfWriter()
 
 #function to decrypt and save the decrypted version of the file for future work
 def decryption():
