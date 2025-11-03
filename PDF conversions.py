@@ -69,3 +69,26 @@ def add_pages(input_pdf, extra_pdf, output_pdf):
 
     with open(output_pdf, "wb") as output_file:
         writer.write(output_file)
+
+    print(f"Added pages to {output_pdf}")
+
+if __name__ == "__main__":
+    print("PDF Tool Menu:")
+    print("1. Decrypt PDF")
+    print("2. Reorder PDF pages")
+    print("3. Add pages from another PDF")
+
+    choice = input("Enter your choice (1/2/3): ")
+
+    input_pdf = "MITLockGuide.pdf"
+    extra_pdf = "chicken.pdf"
+    output_pdf = "output.pdf"
+
+    if choice == "1":
+        decryption(input_pdf, output_pdf)
+    elif choice == "2":
+        reorder_pages(input_pdf, output_pdf)
+    elif choice == "3":
+        add_pages(input_pdf, extra_pdf, output_pdf)
+    else:
+        print("Invalid choice.")
