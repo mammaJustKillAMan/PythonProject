@@ -46,7 +46,7 @@ def reorder_pages(input_pdf, output_pdf):
     new_order = [int(x)-1 for x in new_order.split(", ")]
 
     for i in new_order:
-        writer.add_page(filename.pages[i])
+        writer.add_page(reader.pages[i])
 
     with open(output_pdf, "wb") as output_file:
         writer.write(output_file)
