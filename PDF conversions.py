@@ -19,7 +19,9 @@ def decryption():
     if filename.is_encrypted:
         password = input("Enter your password: ")
         try:
-            result = filename.decrypt(password)
+            if reader.decrypt(password) == 0:
+                print("Your password is incorrect")
+                return
         except PdfReadError:
             ("Unable to decrypt PDF with provided password.")
 
