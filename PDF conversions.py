@@ -24,6 +24,7 @@ def decryption():
                 return
         except PdfReadError:
             ("Unable to decrypt PDF with provided password.")
+            return
 
         for page in result:
                 writer.add_page(page)
