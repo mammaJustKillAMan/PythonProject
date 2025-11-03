@@ -64,7 +64,7 @@ def add_pages(input_pdf, extra_pdf, output_pdf):
         writer.add_page(page)
 
     #pages
-    for page in extra:
+    for page in extra_reader.pages:
         writer.add_page(page)
 
     with open(output_pdf, "wb") as output_file:
