@@ -33,6 +33,8 @@ def decryption(input_pdf, output_pdf):
     with open(output_pdf, "wb") as output_file:
         writer.write(output_file)
 
+    print("Decrypted PDF saved to " + output_pdf)
+
 #function to reorder pages of pdf
 def reorder_pages():
     filename = PdfReader(input_pdf)
