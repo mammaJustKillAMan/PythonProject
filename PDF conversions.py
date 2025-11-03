@@ -14,9 +14,10 @@ output_pdf = "PDF_decrypted.pdf"
 #writer = PdfWriter()
 
 #function to decrypt and save the decrypted version of the file for future work
-def decryption():
-    filename = PdfReader(input_pdf)
-    if filename.is_encrypted:
+def decryption(input_pdf, output_pdf):
+    reader = PdfReader(input_pdf)
+    writer = PdfWriter()
+    if reader.is_encrypted:
         password = input("Enter your password: ")
         try:
             if reader.decrypt(password) == 0:
