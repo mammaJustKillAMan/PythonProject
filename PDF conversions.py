@@ -60,7 +60,7 @@ def add_pages(input_pdf, extra_pdf, output_pdf):
     extra_reader = PdfReader(extra_pdf)
     writer = PdfWriter()
     #pages from the original file
-    for page in filename:
+    for page in main_reader.pages:
         writer.add_page(page)
 
     #pages
