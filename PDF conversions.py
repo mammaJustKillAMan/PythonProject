@@ -55,9 +55,10 @@ def reorder_pages(input_pdf, output_pdf):
 
 #function to add pages at the end of the file,
 #later on one may use the previous function to sort it :P
-def add_pages():
-    filename = input_pdf
-    extra = extra_pdf
+def add_pages(input_pdf, extra_pdf, output_pdf):
+    main_reader = PdfReader(input_pdf)
+    extra_reader = PdfReader(extra_pdf)
+    writer = PdfWriter()
     #pages from the original file
     for page in filename:
         writer.add_page(page)
