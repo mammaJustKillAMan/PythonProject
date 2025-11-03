@@ -51,6 +51,8 @@ def reorder_pages(input_pdf, output_pdf):
     with open(output_pdf, "wb") as output_file:
         writer.write(output_file)
 
+    print(f"Reordered PDF saved to {output_pdf}")
+
 #function to add pages at the end of the file,
 #later on one may use the previous function to sort it :P
 def add_pages():
