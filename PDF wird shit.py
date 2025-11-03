@@ -34,6 +34,7 @@ def count_images(pdf_path):
             for obj in xobject:
                 if xobject[obj]["/Type"] == "/Image":
                     count += 1
+    print("Image count is {}".format(count))
     return count
 
 #counting how many certain words are in the pdf
