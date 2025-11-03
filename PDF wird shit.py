@@ -18,9 +18,11 @@ def extract_text(pdf_path):
     for page in pdf_reader.pages:
         text += page.extract_text() or ""
 
-    words = text.split() #do i need it? the program recommended
-    with open("text.txt", "w") as text_file:
-        text_file.write(words)
+    #words = text.split() #do i need it? NOPE the program recommended
+    with open("text.txt", "w", encoding="utf-8") as text_file: #unicoode transformation format -8bit, thanks to that we can arrange not only english, chinese is ok too
+        text_file.write(text)
+
+    print("Text extracted and saved to text.txt")
 
 #counting images
 def count_images(pdf_path):
